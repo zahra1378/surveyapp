@@ -17,7 +17,7 @@
 .Header__image{
     width: 4rem;
 }
-@media (max-width: 450px){
+@media (max-width: 500px){
     .Header--container{
         width: 90%;
     }

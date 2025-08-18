@@ -9,7 +9,7 @@
 .Footer--txt{
     font-size: 1.3rem;
 }
-@media (max-width: 450px){
+@media (max-width: 500px){
     .Footer{
         padding: 1rem;
     }
