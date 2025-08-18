@@ -23,7 +23,7 @@
 input[type="radio"]:checked{
     transform: scale(1.5);
 }
-@media (max-width: 425px){
+@media (max-width: 450px){
     .question--label__option{
         font-size: 1rem;
         margin-bottom: 0.5rem;
