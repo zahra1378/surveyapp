@@ -1,0 +1,19 @@
+.Footer{
+    padding: 1.5rem;
+    background-color: var(--secondary-light-color);
+    color: var(--primary-dark-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Footer--txt{
+    font-size: 1.3rem;
+}
+@media (max-width: 425px){
+    .Footer{
+        padding: 1rem;
+    }
+    .Footer--txt{
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,13 @@
+.MainLayout{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.MainLayout--outlet__container{
+    background-color: var(--secondary-dark-color);
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
