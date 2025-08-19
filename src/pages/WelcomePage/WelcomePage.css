@@ -46,16 +46,21 @@
     margin-top: 2rem;
 }
 @media (max-width: 500px){
-    .WelcomePage__title{
-        font-size: 1.5rem;
-        margin-bottom: 1rem;
+    .WelcomePage--form{
+        min-width: 5rem;
+        max-width: 20rem;
+        padding: 1rem 0.5rem;
     }
-    .WelcomePage__text{
+    .WelcomePage__title{
         font-size: 1rem;
         margin-bottom: 1rem;
     }
+    .WelcomePage__text{
+        font-size: 0.8rem;
+        margin-bottom: 1rem;
+    }
     .form--name__inp{
-        font-size: 1.2rem;
+        font-size: 1rem;
         padding: 0.5rem 1rem;
     }
     .error-text{

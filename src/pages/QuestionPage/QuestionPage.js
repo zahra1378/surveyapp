@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./QuestionPage.css";
+import { motion, AnimatePresence } from "framer-motion";
 import { useParams, useNavigate } from "react-router-dom";
 import Questions from "../../data/questions.json";
 import Button from "../../components/common/Button/Button";
@@ -146,7 +147,17 @@ const QuestionPage = () => {
       </div>
 
       <div className="question_container">
-        {renderQuestion()}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={questionId}
+            initial={{ opacity: 0, x: 100 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -100 }}
+            transition={{ duration: 0.2 }}
+          >
+            {renderQuestion()}
+          </motion.div>
+        </AnimatePresence>
 
         <div className="nav-buttons">
           <Button
@@ -156,6 +167,19 @@ const QuestionPage = () => {
           >
             قبلی
           </Button>
+
+          <div className="question_numbers--container">
+            <div className={`questionNumber ${Number(id) === 1 ? "activeQuestion" : ""}`}>1</div>
+            <div className={`questionNumber ${Number(id) === 2 ? "activeQuestion" : ""}`}>2</div>
+            <div className={`questionNumber ${Number(id) === 3 ? "activeQuestion" : ""}`}>3</div>
+            <div className={`questionNumber ${Number(id) === 4 ? "activeQuestion" : ""}`}>4</div>
+            <div className={`questionNumber ${Number(id) === 5 ? "activeQuestion" : ""}`}>5</div>
+            <div className={`questionNumber ${Number(id) === 6 ? "activeQuestion" : ""}`}>6</div>
+            <div className={`questionNumber ${Number(id) === 7 ? "activeQuestion" : ""}`}>7</div>
+            <div className={`questionNumber ${Number(id) === 8 ? "activeQuestion" : ""}`}>8</div>
+            <div className={`questionNumber ${Number(id) === 9 ? "activeQuestion" : ""}`}>9</div>
+            <div className={`questionNumber ${Number(id) === 10 ? "activeQuestion" : ""}`}>10</div>
+          </div>
 
           {questionId === Questions.length ? (
             <Button
